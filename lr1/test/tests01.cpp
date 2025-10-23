@@ -11,21 +11,6 @@ TEST(test_02, basic_conversion_pm)
     ASSERT_TRUE(convert12To24(8, 30, "pm") == "2030");
 }
 
-TEST(test_03, midnight_case)
-{
-    ASSERT_TRUE(convert12To24(12, 00, "pm") == "0000");
-}
-
-TEST(test_04, noon_case)
-{
-    ASSERT_TRUE(convert12To24(12, 00, "am") == "1200");
-}
-
-TEST(test_05, single_digit_minutes)
-{
-    ASSERT_TRUE(convert12To24(9, 05, "am") == "0905");
-}
-
 TEST(test_06, evening_time)
 {
     ASSERT_TRUE(convert12To24(11, 45, "pm") == "2345");

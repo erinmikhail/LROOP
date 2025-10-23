@@ -1,3 +1,0 @@
-MyProjectTests 0 0
----
-MyProjectTests
