@@ -1,0 +1,36 @@
+cmake_minimum_required(VERSION 3.10)
+project(FiguresLab4)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include_directories(include)
+
+set(SOURCES
+    src/Point.cpp
+    src/Rhombus.cpp
+    src/Pentagon.cpp
+    src/Hexagon.cpp
+    src/Array.cpp
+)
+
+set(MAIN_SOURCES
+    main.cpp
+    ${SOURCES}
+)
+
+add_executable(figures_lab4 ${MAIN_SOURCES})
+
+enable_testing()
+find_package(GTest CONFIG REQUIRED) 
+
+set(TEST_SOURCES
+    test/test_figures.cpp
+    ${SOURCES}
+)
+
+add_executable(figures_test ${TEST_SOURCES})
+target_link_libraries(figures_test PRIVATE GTest::gtest GTest::gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(figures_test)
