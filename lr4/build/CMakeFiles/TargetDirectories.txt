@@ -1,0 +1,5 @@
+C:/Users/Миша/Desktop/LROOP/lr4/build/CMakeFiles/figures_lab4.dir
+C:/Users/Миша/Desktop/LROOP/lr4/build/CMakeFiles/figures_test.dir
+C:/Users/Миша/Desktop/LROOP/lr4/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/Миша/Desktop/LROOP/lr4/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Миша/Desktop/LROOP/lr4/build/CMakeFiles/ZERO_CHECK.dir
