@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.15)
+project(Lab05_Iterators_Allocators)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_TOOLCHAIN_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+include_directories(include)
+
+add_executable(main 
+    src/fix_memory_res.cpp
+    src/stack.cpp
+    main.cpp
+)
+
+# Просто добавляем тесты без find_package
+add_executable(tests
+    test/test_main.cpp
+    src/fix_memory_res.cpp
+    src/stack.cpp
+)
+
+# Прямое указание библиотек
+target_link_libraries(tests gtest gtest_main)
+
+enable_testing()
+add_test(NAME Lab05_Tests COMMAND tests)
